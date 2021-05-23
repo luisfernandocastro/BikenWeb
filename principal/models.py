@@ -214,8 +214,7 @@ class Persona(models.Model):
     numidentificacion = models.BigIntegerField(db_column='NumIdentificacion')  # Field name made lowercase.
     numcelular = models.BigIntegerField(db_column='NumCelular')  # Field name made lowercase.
     numtelefono = models.BigIntegerField(db_column='NumTelefono', blank=True, null=True)  # Field name made lowercase.
-    correoelectronico = models.CharField(db_column='CorreoElectronico', max_length=45)  # Field name made lowercase.
-    """ tipopersona = models.ForeignKey('Tipopersona', models.DO_NOTHING, db_column='Tipopersona') """  # Field name made lowercase.
+    correoelectronico = models.CharField(db_column='CorreoElectronico', max_length=45)  # Field name made lowercase. # Field name made lowercase.
 
     class Meta:
         managed = False

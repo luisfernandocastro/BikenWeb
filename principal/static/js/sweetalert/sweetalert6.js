@@ -1,6 +1,6 @@
 Swal.fire({
 	title: '<span class="alerttit">Registro Exitoso</span>',
-	text: 'Inicia sesion para poder continuar',
+	text: 'Inicia  para poder continuar',
 	// html:
 	icon: 'success',
 	confirmButtonText: 'Ok',
@@ -14,16 +14,16 @@ Swal.fire({
 	// timerProgressBar:
 	// toast:
 	position: 'center',
-	 allowOutsideClick: false,
-	 allowEscapeKey: false,
-	 allowEnterKey: false,
-	 stopKeydownPropagation: false,
+	allowOutsideClick: false,
+	allowEscapeKey: false,
+	allowEnterKey: false,
+	stopKeydownPropagation: false,
 
 	// input:
 	// inputPlaceholder:
 	// inputValue:
 	// inputOptions:
-	
+
 	//  customClass:
 	// 	container:
 	// 	popup:
@@ -47,7 +47,7 @@ Swal.fire({
 	// cancelButtonText:
 	// cancelButtonColor:
 	// cancelButtonAriaLabel:
-	
+
 	//buttonsStyling: true,
 	//showCloseButton: true,
 	//closeButtonAriaLabel: 'cerrar alerta',
@@ -57,9 +57,9 @@ Swal.fire({
 	// imageWidth:
 	// imageHeight:
 	// imageAlt:
-	
-	}).then((result) => {
-  	if (result.value) {
-  		window.location.href = '../pages/comunidad.html'
+
+}).then((result) => {
+	if (result.value) {
+		window.location.href = '../../../templates/pages/comunidad.html'
 	}
-		});
+});
