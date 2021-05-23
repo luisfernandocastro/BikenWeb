@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../arch/jquery-3.5.0.js" type="text/javascript"></script>
+        <link href="../arch/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+        <link href="../css/all.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/mis_estilos.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../img/svg/icono.png">
+        <title>Manager || Biken</title>
+    </head>
+    <body>
+        <div class="loader-page"></div>
+
+        <div class="container-fluid ">
+            <nav class="navbar navbar-expand-md bgnav fixed-top">
+
+                <a class="navbar-brand" href="inicio.html">
+                    <img src="../img/svg/icono2.png" alt="logo" style="width:50px;">
+                </a>
+
+                <span class="title-manager"> Manager </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="fas fa-bars collapse1"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link contact1" href="AgregarAdmin.html"> Agregar nuevo miembro <i class="fas fa-hands-helping"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="user2" data-toggle="modal" data-target="#Menuuser" data-toggle="tooltip" title="Cuenta">
+                    <img src="../img/svg/user2.svg" alt="logo" style="width:30px;">
+                </a>
+            </nav>
+             <div class="modal fade" id="Menuuser">
+                    <div class="modal-dialog float-right">
+                        <div class="modal-content bg-menuuser user-content ">
+                            <a href="#" class="card-header item-user">
+                                <i class="fas fa-user icon2"></i> Ver tu perfil
+                            </a>
+                            <a href="#borrar.html" class="card-body item-user">
+                                <i class="fas fa-cog icon2"></i> Configuración
+                            </a>
+                            <a href="inicio.html" class="card-footer item-user">
+                                <i class="fas fa-sign-out-alt icon2 "></i> Cerrar Sesion
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-5">
+                <div class="col-lg-2 bgnav-admin">
+                
+                <div class="mt-5">
+                  <ul class="nav flex-column nav-admin">
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1" href="HistorialBiken.html"><i class="fas fa-cash-register"></i> Registro Biken</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1" href="Bicicletassubidas.html"><i class="fa fa-upload" aria-hidden="true"></i> Bicicletas en catalogo</a>
+                    </li>                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1" href="historialUsers.html"><i class="fas fa-tasks"></i> Control de Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1 " href="estadisticas.html"><i class="fas fa-chart-line"></i> Estadisticas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1" href="HistorialCambios.html"><i class="fas fa-history"></i> Historial cambios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-admin1 actived" href="Administrador.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                  </ul>
+                  </div>
+               
+                </div>
+                   
+                <div class="col-lg-10 mt-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="demo" class="carousel carouselpx slide carousel-fade" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                    <li data-target="#demo" data-slide-to="3"></li>
+                                </ul>
+
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="../img/admin.jpg" alt="Bicicleta1" width="1200" height="300">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/bici2.jpg" alt="Bicicleta2" width="1200" height="300">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/bici3.jpg" alt="Bicicleta3" width="1200" height="300">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../img/bici4.jpg" alt="Bicicleta4" width="1200" height="300">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon badge-primary"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-5 mt-3">
+
+                                <span class="recien-admin">Actividad Reciente</span><br/><br/>
+
+                                <img src="../img/users/user1.jpg" class="persona" title="Ver perfil">  Camila Andrea Gonzalez se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user2.jpg" class="persona" title="Ver perfil">  Daniela Maria Fernandez se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user3.jpg" class="persona" title="Ver perfil">  Cristhian Gray se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user4.jpg" class="persona" title="Ver perfil">  Laura Andrea Dante se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user5.jpg" class="persona" title="Ver perfil">  Sahra Salome Hurtado se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user6.jpg" class="persona" title="Ver perfil">  Danna Fernanda Sanchéz se ha registrado.<br/><br/>
+
+                                <img src="../img/users/user7.jpg" class="persona" title="Ver perfil"> Jose Daniel Vasquez se ha registrado.<br/><br/>
+
+                                <a href="historialUsers.html"><button class="btn btn-primary bgnav d-block mx-auto">Ver Registro Completo</button></a>
+                            </div>
+                            <div class="col-lg-7 mt-3">
+                                <img src="../img/Users/user4.jpg" class="persona" title="Ver perfil"> Ha alquilado la <strong>bicicleta de Montaña 29" Yakima</strong>
+                                <img src="../img/catbike/bike4.1.jpg" class="bike-admin"><br/>
+
+                                <img src="../img/Users/user1.jpg" class="persona" title="Ver perfil"> Ha subido su <strong>bicicleta de Ruta 27" Adidas</strong><a href="HistorialBial.html"><button class="btn btn-plus float-right">Ver mas</button></a><br/><br/>
+
+                                <img src="../img/Users/user3.jpg" class="persona" title="Ver perfil"> Ha subido su <strong>bicicleta Urbana 32" GW</strong><a href="HistorialBial.html"><button class="btn btn-plus float-right">Ver mas</button></a><br/><br/>
+
+                                <img src="../img/Users/user7.jpg" class="persona" title="Ver perfil"> Ha subido su <strong>bicicleta de Montaña 27" Scoot</strong><a href="HistorialBial.html"><button class="btn btn-plus float-right">Ver mas</button></a><br/><br/>
+
+                                <img src="../img/Users/user4.jpg" class="persona" title="Ver perfil"> Ha subido su <strong>bicicleta de Ruta 26" Scoot</strong><a href="HistorialBial.html"><button class="btn btn-plus float-right">Ver mas</button></a><br/><br/>
+
+                                <img src="../img/Users/user6.jpg" class="persona" title="Ver perfil"> Ha subido su <strong>bicicleta BMX 28" Adidas</strong><a href="HistorialBial.html"><button class="btn btn-plus float-right">Ver mas</button></a><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+         
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/functions.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="../arch/bootstrap/js/bootstrap.js" type="text/javascript"></script> 
+        <script type="text/javascript" src="../js/sweetalert/sweetalert5.js"></script> 
+    </body>
+</html>
