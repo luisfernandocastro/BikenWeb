@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Biken || Sube tu Bicicleta{% endblock  %}
+{% block navicon %}href='{% url "murouser" %}'{% endblock %}
+{% block navbar %}
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link contact1" href="{% url 'murouser' %}">Inicio </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link contact1 cars" href='#' data-toggle="tooltip" title="Tu Carrito"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}

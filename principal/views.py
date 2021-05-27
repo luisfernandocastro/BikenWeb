@@ -4,14 +4,22 @@ from .forms import PersonaForm
 from django.contrib import messages
 # Create your views here.
 
+
 def index(request):
-    return render (request, 'index.html')
+    return render (request, 'index.html') 
 
 def home(request):
     return render (request, 'pages/inicio.html')
 
 def endReg(request):
     return render (request, 'pages/Message3.html')
+
+def quienesSomos(request):
+    return render (request, 'pages/Quienes somos.html')
+
+
+def contacto(request):
+    return render (request, 'pages/Contacto.html')
 
 
 def registro(request):
@@ -30,7 +38,17 @@ def registro(request):
             messages.success(request,"Inicia sesión para poder continúar")
             return redirect('messagereg')
 
-    return render (request, 'pages/registro.html',contexto)
+    return render (request, 'pages/registro.html',contexto) 
+
+
+def login(request):
+    return render (request, 'pages/login.html')
+
+
+def murouser(request):
+    return render (request, 'pages/muroUser.html')
 
 
 
+def uploadBike(request):
+    return render (request, 'pages/uploadBike.html')

@@ -1,0 +1,31 @@
+{% extends 'pages/inicio.html' %}
+{% load static %}
+
+{% block title%} Biken || User {% endblock %}
+{% block navicon %}href='{% url "murouser" %}'{% endblock %}
+
+{% block navbar %}
+<form class="form-inline" action="#">
+    <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+</form>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <i class="fas fa-bars collapse1"></i>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link contact1" href="{% url 'murouser' %}">Inicio </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link contact1" href="{% url 'uploadbike' %}">Sube tu bicicleta <i class="fa fa-upload" aria-hidden="true"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link contact1 cars" href='#' data-toggle="tooltip" title="Tu Carrito"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+    </ul>
+</div>
+
+<a class="user2" data-toggle="modal" data-target="#Menuuser" data-toggle="tooltip" title="Cuenta">
+    <img src='{% static "/img/svg/user2.svg"%}' alt="logo" style="width:30px;">
+</a>
+{% endblock %}
