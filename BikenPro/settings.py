@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-
 from django.contrib.admin.sites import AdminSite
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +36,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',
+    #'colorfield',
     #'admin_interface',
     #'admin_black.apps.AdminBlackConfig',
     'django.contrib.admin',
