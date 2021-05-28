@@ -34,11 +34,11 @@
                         <span class="iconify" data-icon="dashicons:arrow-right-alt2" data-inline="false"></span>
                     </div>
                     <ul class="nav__list">
+                        {%block navbar%}
                         <a href="#" class="nav__link active">
                             <span class="iconify nav__icon" data-icon="ion:grid-outline" data-inline="false"></span>
                             <span class="nav__text">Inicio</span>
                         </a>
-                        {%block navbar%}
                         <a href="{% url 'login' %}" class="nav__link">
                             <span class="iconify nav__icon" data-icon="ant-design:login-outlined" data-inline="false"></span>
                             <span class="nav__text">Inicia Sesión</span>
@@ -88,16 +88,16 @@
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src='{% static "/img/bici1.jpg" %}' alt="Bicicleta1" width="100%" height="500">
+                            <img src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner1.jpg' alt="Bicicleta1" width="100%" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img src='{% static "/img/bici2.jpg" %}' alt="Bicicleta2" width="100%" height="500">
+                            <img src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner3.jpg' alt="Bicicleta2" width="100%" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img src='{% static "/img/bici3.jpg" %}' alt="Bicicleta3" width="100%" height="500">
+                            <img src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner2.jpg' alt="Bicicleta3" width="100%" height="500">
                         </div>
                         <div class="carousel-item">
-                            <img src='{% static "/img/bici4.jpg" %}' alt="Bicicleta4" width="100%" height="500">
+                            <img src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner6.jpg' alt="Bicicleta4" width="100%" height="500">
                         </div>
                     </div>
 
@@ -433,8 +433,8 @@
         </div>
 
 
-        <div class="container-fluid col-lg-12 footer1">
-            <div class="jumbotrom col-lg-12  bgnav mt-5 text-light bgimg">
+
+            <div class="jumbotrom col-lg-12  bgnav mt-5 text-light bgimg footer1">
                 <!--<img src="../img/bike.svg" class="imgjumb">-->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -445,7 +445,7 @@
                 <p>Linea Gratuita 018000-00001</p>
                 <p>correo: preguntas@biken.com</p>
 
-                <div class="container-fluid col-12">
+                <div class="container col-12">
                     <div class="row">
                         <div class="col-5"></div>
                         <div class="sociales col-2">
@@ -467,7 +467,6 @@
                 </ul>
                 &copy; 2020-2021 biken.com Derechos Reservados
             </div>
-        </div>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

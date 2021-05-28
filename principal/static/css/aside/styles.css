@@ -42,7 +42,7 @@
 body {
   position: relative;
   margin: 0;
-  padding: 1rem 0 0 4rem;
+  padding: 1rem 0 0 2rem;
   font-family: var(--body-font);
   background-color: var(--white-color);
   -webkit-transition: .5s;
