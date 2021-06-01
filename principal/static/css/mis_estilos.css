@@ -630,9 +630,9 @@ textarea::-webkit-input-placeholder {
 }
 
 
-.container-com {
-  /*overflow: hidden; /*------No se sale del contenedor----*/
-}
+/* .container-com {
+  overflow: hidden; ------No se sale del contenedor----
+} */
 
 .container-com1 {
   border-color: transparent;
@@ -833,7 +833,19 @@ textarea::-webkit-input-placeholder {
 
 /*---------------------------------------------------------------end estilos footer------------------------------------------------------*/
 
+.bgimg_upload{
+  background-image: url(../img/svg/bike4.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position-x: right;
+}
 
+.bgimg_registro{
+  background-image: url(../img/svg/bike2.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position-x: right;
+}
 
 /*--------------------------------------------------------media Screen-------------------------------------------------------------------*/
 

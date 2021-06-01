@@ -48,40 +48,39 @@
         {% endblock content %}
         {% block footer %}
 
-        <div class="container-fluid col-lg-12 footer1">
-            <div class="jumbotrom col-lg-12  bgnav mt-5 text-light bgimg">
-                <!--<img src="../img/bike.svg" class="imgjumb">-->
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link contact1" href='{% url "contacto" %}'> Contactanos <i class="fas fa-at"></i></a>
-                    </li>
-                </ul>
-                <p>Linea Gratuita 018000-00001</p>
-                <p>correo: preguntas@biken.com</p>
-
-                <div class="container-fluid col-12">
-                    <div class="row">
-                        <div class="col-5"></div>
-                        <div class="sociales col-2">
-                            <a href="#" class="facebook"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="facebook"><i class="fab fa-youtube"></i></a>
-                            <a href="https://github.com/cyborglf" class="logo"><img
-                                    src='{% static "/img/svg/iconoc2.png"%}' class="logo"></a>
-                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="col-5"></div>
-                    </div>
+        <div class="jumbotrom col-lg-12 mt-5 text-light footerInf">
+            <div class="row">
+                <div class="col-lg-2">
+                    <p class="text-footer d-flex justify-content-center">B
+                        <i class="punt">.</i>
+                    </p>
+                    <p class="text-footerCopy">&copy; Biken-2021</p>
                 </div>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link contact1" href='{% url "quienessomos" %}'> Quienes Somos <i
-                                class="fas fa-question"></i></a>
-                    </li>
-                </ul>
-                &copy; 2020-2021 biken.com Derechos Reservados
+                <div class="col-lg-3">
+                    <p class="titlefooter">Empresa</p>
+                    <a href="{% url 'quienessomos' %}"><p class="subtitlefooter">Sobre nosotros</p></a>
+                    <p class="subtitlefooter">Carreras</p>
+                    <a href="{% url 'contacto' %}"><p class="subtitlefooter">Contactenos</p></a>
+                </div>
+                <div class="col-lg-3">
+                    <p class="titlefooter">Más información</p>
+                    <p class="subtitlefooter">Términos & Condiciones</p>
+                    <p class="subtitlefooter">Politica y Privacidad</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="titlefooter">Siganos</p>
+                    <div class="d-flex justify-content-left">
+                        <a href=""><span class="iconify iconfooter" data-icon="akar-icons:facebook-fill" data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:youtube-with-circle" data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:instagram-with-circle"
+                            data-inline="false"></span></a>
+
+                    </div>
+
+                </div>
             </div>
-        </div>
         {% endblock %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

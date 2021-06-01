@@ -1,16 +1,148 @@
 {% extends 'base.html' %}
-{% block title %}Biken || Sube tu Bicicleta{% endblock  %}
-{% block navicon %}href='{% url "murouser" %}'{% endblock %}
+{% block title %}Biken || Sube tu Bicicleta{% endblock %}
 {% block navbar %}
-<div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link contact1" href="{% url 'murouser' %}">Inicio </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link contact1 cars" href='#' data-toggle="tooltip" title="Tu Carrito"><i class="fas fa-shopping-cart"></i></a>
-        </li>
-    </ul>
+{% load static  %}
+
+{% block classbody %}<body class="bgimg_upload">{% endblock %}
+
+<a href="{% url 'home' %}" class="nav__link active">
+    <span class="iconify nav__icon" data-icon="ion:grid-outline" data-inline="false"></span>
+    <span class="nav__text">Inicio</span>
+</a>
+<a href="{% url 'login' %}" class="nav__link">
+    <span class="iconify nav__icon" data-icon="ant-design:user-outlined" data-inline="false"></span>
+    <span class="nav__text">Ver Perfil</span>
+</a>
+<a href="{% url 'uploadbike' %}" class="nav__link">
+    <span class="iconify nav__icon" data-icon="si-glyph:bicycle-3" data-inline="false"></span>
+    <span class="nav__text">Sube tu Bici</span>
+</a>
+<a href="#" class="nav__link">
+    <span class="iconify nav__icon" data-icon="carbon:favorite" data-inline="false"></span>
+    <span class="nav__text">Favorites</span>
+</a>
+
+{% endblock %}
+
+{% block itemsBottom %}
+
+
+<!-- <a href="#" class="nav__link">
+    <span class="iconify nav__icon " data-icon="ri:logout-circle-line" data-inline="false"></span>
+    <span class="nav__text">Salir</span>
+</a> -->
+<a href="#" class="nav__link fixedItem">
+    <span class="iconify nav__icon " data-icon="feather:settings" data-inline="false"></span>
+    <span class="nav__text">Ajustes</span>
+</a>
+
+
+{% endblock %}s
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
+
+            <img src="{% static '/img/portacon.png' %}" height="120px" width="260px">
+            <strong>
+                <div class="mt-5" style="font-size: 28px; font-family:cursive; text-align: center; color :rgb(23, 75, 193 )">
+                    ANUNCIA TU BICICLETA</div>
+            </strong>
+
+            <div class="mt-5" style="text-align: center;">Selecciona las características de tu bicicleta, añade una foto y
+                establece la tarifa deseada. Una vez hecho esto, tu bici estarà disponible para ser alquilada.</div>
+
+            <hr size="1px" color="gray" />
+
+            <form class="container mt-5" action="Message2.html">
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <strong><label for="validationDefault01">Modelo:</label></strong>
+                        <select class="custom-select" id="validationDefault04" required>
+                            <option selected disabled value="">---</option>
+                            <option> Ruta </option>
+                            <option> Montaña</option>
+                            <option> BMX</option>
+                            <option> Plegable</option>
+                            <option> Urbana </option>
+                            <option> Para niños</option>
+
+
+                        </select>
+                    </div>
+
+
+                    <div class="col-md-4 mb-3">
+                        <strong><label for="validationDefault02">Material:</label></strong>
+                        <select class="custom-select" id="validationDefault04" required>
+                            <option selected disabled value="">---</option>
+                            <option> Aluminio</option>
+                            <option> Acero</option>
+                            <option> Titanio</option>
+                            <option> Polonio</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <strong><label for="validationDefaultUsername">Color:</label></strong>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            </div>
+                            <input type="text" class="form-control" id="validationDefaultUsername"
+                                aria-describedby="inputGroupPrepend2" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <strong> <label for="validationDefault03">Valor Alquiler:</label></strong>
+                        <input type="number" class="form-control" id="validationDefault03" required>
+                    </div>
+
+
+                    <div class="col-md-4 mb-3">
+                        <strong> <label for="validationDefault04">Bici Electrica:</label></strong>
+                        <select class="custom-select" id="validationDefault04" required>
+                            <option selected disabled value="">---</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <strong> <label for="validationDefault03">Cantidad de bicicletas:</label></strong>
+                        <input type="number" class="form-control" id="validationDefault05" required>
+                    </div>
+
+
+                    <strong><label for=>&nbsp&nbspSubir tu bici:</label></strong>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" required="required" autocomplete="text"
+                            id="customFile">
+                        <label class="custom-file-label" for="inputGroupFile01" for="customFile">Subir img
+                            bicicleta</label>
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary mt-5">Subir datos</button>
+
+            </form>
+
+            <div class="img-ruedas mt-5">
+                <img src="{% static '/img/fotorueda.png'%}" height="110px" width="240px" align="left">
+            </div>
+
+
+        </div>
+        <div class="col-lg-5"></div>
+    </div>
 </div>
+
+<br>
 
 {% endblock %}
