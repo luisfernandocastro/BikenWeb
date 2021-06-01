@@ -44,10 +44,18 @@ body {
   margin: 0;
   padding: 1rem 0 0 2rem;
   font-family: var(--body-font);
-  background-color: var(--white-color);
+  /*background-color: var(--white-color);*/
   -webkit-transition: .5s;
   transition: .5s;
 }
+
+@media screen and (max-width: 600px) {
+  body{
+    padding: 5rem 0 0 5rem;
+  }
+
+}
+
 
 h1 {
   margin: 0;
@@ -206,4 +214,29 @@ a {
   height: 30px;
   width: 30px;
   color: red;
+}
+
+.subtitleCard{
+  font-style: italic;
+  text-align: end;
+}
+
+
+.title{
+  font-weight: bold;
+}
+
+
+.col-lg-3 .card{
+  border-radius: 30px;
+  box-shadow:10px 10px 8px 0px  hsl(0, 0%, 90%);
+}
+
+
+a  .card-img-top {
+  border-radius: 30px;
+}
+
+a  .card-img-top:hover{
+  border: solid 1px #d2e2ff;
 }

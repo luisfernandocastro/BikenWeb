@@ -21,7 +21,7 @@ class BicletasAdmin(admin.ModelAdmin):
     search_fields = ['color']
     list_editable = ['precioalquiler']
     list_filter = ['color','categoria']
-    list_per_page = 2
+    list_per_page = 10
 
     pass
 

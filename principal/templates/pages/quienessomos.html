@@ -1,0 +1,145 @@
+{% load static%}
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='{% static "/arch/jquery-3.5.0.js"%}' type="text/javascript"></script>
+  <link href='{% static "/arch/bootstrap/css/bootstrap.css"%}' rel="stylesheet" type="text/css" />
+  <link href='{% static "/css/normalize.css" %}' rel="stylesheet" type="text/css">
+  <link href='{% static "/css/all.css"%}' rel="stylesheet" type="text/css" />
+  <link href='{% static "/css/mis_estilos.css"%}' rel="stylesheet" type="text/css">
+  <script src='{% static "/js/functions.js"%}' type="text/javascript"></script>
+  <link rel="icon" href='{% static "/img/svg/icono.png"%}'>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <title>{% block title %}Biken || Quienes somos{% endblock %}</title>
+</head>
+
+<body>
+  <div class="loader-page"></div>
+
+  <img src='{% static "/img/svg/portada.gif"%}' class="mt-5" height="53%" width="100%" alt="img">
+  <br>
+
+  <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-dark colorbiken fixed-top">
+      <a class="navbar-brand" href="inicio.html">
+        <img src='{% static "/img/svg/icono2.png"%}' alt="logo" style="width:50px;">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-items">
+            <a class="nav-link" href='{% url "home"%}'>Inicio <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href='{% url "contacto"%}'>Contacto <span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <form class="form-inline" action="#">
+          <input class="form-control mr-sm-2 mt-2" type="text" placeholder="Buscar">
+          <button class="btn btn2 mt-2" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+    <br>
+
+    <br>
+    {%block content%}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div style="font-size: 40px; font-family:times new roman; text-align: left; color : rgb(10, 85, 216);">Quiénes
+            somos</div>
+
+          <br>
+          <p style="text-align: justify">El Proyecto del Alquiler de Bicicletas (BIKEN) se realiza con el fin de mejorar
+            la movilidad de transporte en la ciudad de Popayan , haciendo uso de este vehículo y teniendo como
+            beneficios la reducción de niveles de contaminación ambiental, el mejoramiento de la salud tanto fisica como
+            emocional, y el ahorro de dinero por parte del cliente. Tambien conseguir con facilidad y a precios comodos
+            una bicicleta rentada ya que muchas veces el cliente no cuenta con los recursos suficientes para hacer
+            compra de esta.
+            <br>
+            <br>
+            Una de las estrategias a seguir es brindar un buen servicio y atención al cliente, aumentando los niveles de
+            calidad y empeño de nuestro proyecto cada dia,
+            para asi lograr que el proyecto se mantenga en funcion y sea reconocido cada vez mas.
+            <br>
+            Sin embargo, debe quedar claro que este proyecto no se hace con la intención de generar oposición al uso del
+            vehículo automotor, pues es comprensible que en situaciones especiales
+            es necesario, aunque el uso de la bicicleta es un medio de transporte aún más agil, economico y facil de
+            emplear en cualquier momento.
+            <br>
+            <br>
+          </p>
+          <img src='{% static "/img/qsomos.png" %}' width="230px" height="180px" class="d-block mx-auto">
+
+
+        </div>
+        <div class="col-lg-6">
+          <img src='{% static "/img/svg/anim.svg"%}' class="anim">
+        </div>
+      </div>
+    </div>
+
+
+    {% endblock %}
+
+    <div class="jumbotrom col-lg-12 mt-5 text-light footerInf">
+      <div class="row">
+        <div class="col-lg-2">
+          <p class="text-footer d-flex justify-content-center">B
+            <i class="punt">.</i>
+          </p>
+          <p class="text-footerCopy">&copy; Biken-2021</p>
+        </div>
+        <div class="col-lg-3">
+          <p class="titlefooter">Empresa</p>
+          <a href="{% url 'quienessomos' %}">
+            <p class="subtitlefooter">Sobre nosotros</p>
+          </a>
+          <p class="subtitlefooter">Carreras</p>
+          <a href="{% url 'contacto' %}">
+            <p class="subtitlefooter">Contactenos</p>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <p class="titlefooter">Más información</p>
+          <p class="subtitlefooter">Términos & Condiciones</p>
+          <p class="subtitlefooter">Politica y Privacidad</p>
+        </div>
+        <div class="col-lg-4">
+          <p class="titlefooter">Siganos</p>
+          <div class="d-flex justify-content-left">
+            <a href=""><span class="iconify iconfooter" data-icon="akar-icons:facebook-fill"
+                data-inline="false"></span></a>
+            <a href=""><span class="iconify iconfooter ml-2" data-icon="ant-design:twitter-circle-filled"
+                data-inline="false"></span></a>
+            <a href=""><span class="iconify iconfooter ml-2" data-icon="akar-icons:google-contained-fill"
+                data-inline="false"></span></a>
+            <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:linkedin-with-circle"
+                data-inline="false"></span></a>
+            <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:instagram-with-circle"
+                data-inline="false"></span></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src='{% static "/arch/bootstrap/js/bootstrap.js"%}' type="text/javascript"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Persona
+from .models import *
 from .forms import PersonaForm
 from django.contrib import messages
 # Create your views here.
@@ -9,13 +9,17 @@ def index(request):
     return render (request, 'index.html') 
 
 def home(request):
-    return render (request, 'pages/inicio.html')
+    bicicletas = Bicicletas.objects.all()
+    data = {
+        'bicicletas' : bicicletas
+    }
+    return render (request, 'pages/inicio.html',data)
 
 def endReg(request):
     return render (request, 'pages/Message3.html')
 
 def quienesSomos(request):
-    return render (request, 'pages/Quienes somos.html')
+    return render (request, 'pages/quienessomos.html')
 
 
 def contacto(request):
