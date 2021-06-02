@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 from .models import *
-from .forms import PersonaForm
+from .forms import PersonaForm, BicicletasForm
 from django.contrib import messages
 # Create your views here.
 
@@ -17,6 +17,11 @@ def home(request):
 
 def endReg(request):
     return render (request, 'pages/Message3.html')
+
+
+def endUploadBike(request):
+    return render (request, 'pages/Message2.html')
+
 
 def quienesSomos(request):
     return render (request, 'pages/quienessomos.html')
@@ -55,4 +60,19 @@ def murouser(request):
 
 
 def uploadBike(request):
-    return render (request, 'pages/uploadBike.html')
+    if request.method == 'GET':
+        form = BicicletasForm()
+        contexto={
+            'FormBike':form
+        }
+    else: 
+        form = BicicletasForm(request.POST,files=request.FILES)
+        contexto={
+            'FormBike':form
+        }
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Inicia sesión para poder continúar")
+            return redirect('messagebike')
+
+    return render (request, 'pages/uploadBike.html',contexto)

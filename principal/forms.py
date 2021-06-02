@@ -8,3 +8,10 @@ class PersonaForm(forms.ModelForm):
         #fields = ('apellidos',) 
 
 
+class BicicletasForm(forms.ModelForm):
+    class Meta:
+        model = Bicicletas
+        fields = '__all__'
+        #fields = ('apellidos',) 
+
+

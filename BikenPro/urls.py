@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 #from django.contrib.auth.views import login,logout_then_login
-from principal.views import index, home,registro,login,endReg, quienesSomos,contacto,murouser,uploadBike
+from principal.views import index, home,registro,login,endReg, quienesSomos,contacto,murouser,uploadBike,endUploadBike
 
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('uploadBike/' , uploadBike, name='uploadbike'),
     path('murouser/' , murouser, name='murouser'),
     path('endReg/' , endReg, name='messagereg'),
+    path('endUploadBike/' , endUploadBike, name='messagebike'),
     path('quienessomos/' , quienesSomos, name='quienessomos'),
     path('contacto/' , contacto, name='contacto')
 ]

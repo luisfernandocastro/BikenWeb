@@ -345,7 +345,9 @@
                         {% for b in bicicletas %}
                         <div class="col-lg-3 mt-3">
                             <div class="card">
-                                <a id="alert"><img class="card-img-top imgcat" src="{{b.foto.url}}"
+                                <a id="alert"><img class="card-img-top placeholderimgup imgcat" src="{% static 'img/svg/loading.gif' %}"
+                                        alt="Card image cap">
+                                        <img class="card-img-top imgcat placeholderimgdown" src="{{b.foto.url}}"
                                         alt="Card image cap"></a>
                                 <div class="card-body">
                                     <p class="card-text title">Bicicleta de {{b.categoria}}</p>
@@ -387,13 +389,13 @@
                 <div class="col-lg-3">
                     <p class="titlefooter">Empresa</p>
                     <a href="{% url 'quienessomos' %}"><p class="subtitlefooter">Sobre nosotros</p></a>
-                    <p class="subtitlefooter">Carreras</p>
+                    <a href="#"><p class="subtitlefooter">Carreras</p></a>
                     <a href="{% url 'contacto' %}"><p class="subtitlefooter">Contactenos</p></a>
                 </div>
                 <div class="col-lg-3">
                     <p class="titlefooter">Más información</p>
-                    <p class="subtitlefooter">Términos & Condiciones</p>
-                    <p class="subtitlefooter">Politica y Privacidad</p>
+                    <a href="#"><p class="subtitlefooter">Términos & Condiciones</p></a>
+                    <a href="#"><p class="subtitlefooter">Politica y Privacidad</p></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="titlefooter">Siganos</p>

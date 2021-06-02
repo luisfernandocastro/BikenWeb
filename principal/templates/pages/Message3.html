@@ -11,10 +11,11 @@
         <link href='{% static "/css/mis_estilos.css" %}'  rel="stylesheet" type="text/css">
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <link href='{% static "/img/svg/icono.png" %}' rel="icon" >
-        <title>Registro || Exitoso</title>
+        <title>{% block title %}Registro || Exitoso{% endblock %}</title>
     </head>
 
     <body class="listo">
+    {% block content %} 
             
     {% if messages %}
     {% for m in messages %}
@@ -39,6 +40,7 @@
     {% endfor %}
     {% endif %}
 
+    {% endblock %}
         <nav class="navbar navbar-expand-sm fixed-top">
                 <a class="navbar-brand" href="#">
                     <img src='{% static "/img/svg/icono.png" %}' alt="logo" style="width:75px;">
