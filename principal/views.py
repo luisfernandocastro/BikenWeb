@@ -51,7 +51,7 @@ def registro(request):
 
 
 def login(request):
-    return render (request, 'pages/login.html')
+    return render (request, 'registration/login.html')
 
 
 def murouser(request):

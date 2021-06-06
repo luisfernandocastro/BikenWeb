@@ -46,8 +46,12 @@
 						<h3 class="text-center title-com"> <strong>BIKEN</strong></h3>
 					</div>
 					<br>
-					<form action='{% url "murouser" %}' method="">
-						<div class="form-group">
+					{% load crispy_forms_tags %}
+					<form action='' method="POST">
+
+						{% csrf_token %}
+						{{form | crispy}}
+<!-- 						<div class="form-group">
 							<input type="email" name="usuario" id="usr" class="form-control"
 								placeholder="juankm@example.com" required>
 						</div>
@@ -55,9 +59,9 @@
 						<div class="form-group">
 							<input type="password" name="Password" id="pwd" class="form-control" placeholder="*********"
 								required>
-						</div>
+						</div> -->
 						<div class="form-group">
-							<button class="btn btn-primary d-block mx-auto btn-com btn-block">Ingresar</button>
+							<button type="submit" class="btn btn-primary d-block mx-auto btn-com btn-block">Ingresar</button>
 						</div>
 					</form>
 					<div>
