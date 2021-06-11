@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-.principal {
-  background-size: cover;
-  position: relative;
-}
 
 nav {
   font-size: 14px;
@@ -14,7 +10,12 @@ nav {
 .colorbiken {
   background-color: #2059BD;
 }
+/*...........................................index..........................................................................*/
 
+.principal {
+  background-size: cover;
+  position: relative;
+}
 /*-------------------Pagina Bienvenida-------------------------*/
 
 #particles-js {
@@ -29,7 +30,7 @@ nav {
 }
 
 .titulo {
-  /*---------------Titulo de la pagina inicio----------*/
+  /*---------------Titulo de la pagina index----------*/
   font-size: 160px;
   text-align: center;
   color: #2059BD;
@@ -38,6 +39,7 @@ nav {
 }
 
 .subtitulo {
+  /*---------------Subtitulo de la pagina index----------*/
   font-size: 22px;
   text-align: center;
   font-family: bold;
@@ -106,7 +108,7 @@ nav {
   color: #2059BD;
 }
 
-/*------------------------carga paginas--------------------------*/
+/*------------------------cargar todas las paginas--------------------------*/
 
 .loader-page {
   position: fixed;
@@ -160,25 +162,66 @@ nav {
   transform: rotate(0deg);
 }
 
-/*------------------------------pagina inicio-------------------------*/
+/*------------------------------ home page-------------------------------------------------------*/
 
 .collapse1 {
   color: #ffffff;
   font-size: 30px;
 }
 
+.placeholderimgup{
+  position: absolute;
+}
 
 
+.placeholderimgdown{
+  position: relative;
+}
+/*------------------------------buscar home page-------------------------------*/
 
 
-.btn2 {
-  color: rgb(255, 255, 255);
+.div_search{
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-search{
+  height: 55px;
+  width:80vh;
+  outline: none;
+  border: solid 1px white;
+  border-radius: 30px;
+  padding-left: 10px;
+  text-transform: capitalize;
+}
+
+.div-btn-search{
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-search {
+  color: white;
   font-size: 20px;
+  z-index: 1000;
+  position: absolute;
+  top: 45%;
+  margin-top: 3px;
+  margin-right: 4%;
+  border-radius: 30px;
 }
 
-.btn2:hover {
-  color: #CCCFD4;
+.btn-search:hover {
+  background-color: #d3d3d3;
+  color: #2059BD;
 }
+
+/*----------------------------------------end buscar homepage-------------------------------------------*/
+
 
 .container1 {
   overflow: hidden;
@@ -245,9 +288,6 @@ nav {
   height: 250px;
 }
 
-.search {
-  margin-left: 50%;
-}
 
 .search1 {
   margin-left: 112px;
@@ -376,15 +416,6 @@ nav {
 
 }
 
-.user2 {
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-.user2:hover {
-  background-color: #518DF6;
-}
 
 
 .dropleft {
@@ -771,6 +802,8 @@ textarea::-webkit-input-placeholder {
   box-shadow: 10px 10px 8px 0px hsl(0, 0%, 90%);
 }
 
+
+
 /*--------------------------------------------------------------------------estilos footer-----------------------------------------------*/
 
 .footerInf {
@@ -801,10 +834,6 @@ textarea::-webkit-input-placeholder {
 
 }
 
-/* .punt {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-} */
 
 .titlefooter{
   text-align: start;  
@@ -848,19 +877,32 @@ textarea::-webkit-input-placeholder {
 }
 
 
-.placeholderimgup{
-  position: absolute;
-}
 
-
-.placeholderimgdown{
-  position: relative;
-}
 
 /*--------------------------------------------------------media Screen-------------------------------------------------------------------*/
 
-@media screen and (max-width: 600px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 800px){
+  
+  .input-search{
+    width: 60vh;
+  }
 
+  .div-btn-search{
+    width: 60vh;
+  }
+
+  .btn-search{
+    top: 23%;
+    margin-top: 3px;
+    margin-left: 55%;
+  }
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .titulo {
     margin-top: 30%;
     font-size: 90px;
@@ -886,11 +928,28 @@ textarea::-webkit-input-placeholder {
   }
 
   .carouselprincipal {
-    display: none;
+    height: 200px;
   }
 
   .welcome,
   .welcome1 {
     display: none;
   }
+
+  .input-search{
+    width: 40vh;
+  }
+
+
+  .div-btn-search{
+    width: 40vh;
+  }
+
+  .btn-search{
+    top: 19%;
+    margin-top: 3px;
+    margin-left: 48%;
+    border-radius: 30px;
+  }
+
 }

@@ -12,7 +12,6 @@
     <link href='{% static "/css/mis_estilos.css"%}' rel="stylesheet" type="text/css">
     <link href='{% static "/css/all.css" %}' rel="stylesheet" type="text/css" />
     <link href='{% static "/css/aside/styles.css" %}' rel="stylesheet">
-
     <!-- BOX ICONS CSS-->
     <link href='{% static "/img/svg/icono.png"%}' rel="shortcut icon" />
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -42,7 +41,8 @@
                         </a>
                         {% if user.is_authenticated %}
                         <a href="{% url 'login' %}" class="nav__link">
-                            <span class="iconify nav__icon" data-icon="ant-design:user-outlined" data-inline="false"></span>
+                            <span class="iconify nav__icon" data-icon="ant-design:user-outlined"
+                                data-inline="false"></span>
                             <span class="nav__text">Ver Perfil</span>
                         </a>
                         <a href="{% url 'uploadbike' %}" class="nav__link">
@@ -52,20 +52,22 @@
                         <a href="#" class="nav__link">
                             <span class="iconify nav__icon" data-icon="carbon:favorite" data-inline="false"></span>
                             <span class="nav__text">Favorites</span>
-                        </a> 
+                        </a>
                         <div class="spacer">
                             <a href="{% url 'logout' %}" class="nav__link ">
-                                <span class="iconify nav__icon " data-icon="ri:logout-circle-line" data-inline="false"></span>
+                                <span class="iconify nav__icon " data-icon="ri:logout-circle-line"
+                                    data-inline="false"></span>
                                 <span class="nav__text">Salir</span>
                             </a>
                             <a href="#" class="nav__link">
-                                <span class="iconify nav__icon " data-icon="feather:settings" data-inline="false"></span>
+                                <span class="iconify nav__icon " data-icon="feather:settings"
+                                    data-inline="false"></span>
                                 <span class="nav__text">Ajustes</span>
                             </a>
-                        </div>                   
+                        </div>
 
                         {% else%}
-                        
+
                         <a href="{% url 'login' %}" class="nav__link">
                             <span class="iconify nav__icon" data-icon="ant-design:login-outlined"
                                 data-inline="false"></span>
@@ -78,7 +80,7 @@
                         </a>
                         <a href="#" class="nav__link">
                             <span class="iconify nav__icon" data-icon="carbon:favorite" data-inline="false"></span>
-                            <span class="nav__text">Favorites</span>
+                            <span class="nav__text">Favoritas</span>
                         </a>
                         {% endif %}
                         {%endblock%}
@@ -87,8 +89,22 @@
                 {% block itemsBottom %}{% endblock %}
             </nav>
         </div>
+
         <div class="row">
+
             <div class="col-lg-12">
+                <div class=""> 
+                    <form class="form-inline position-absolute div_search" action="#">
+                        <input class="input-search" type="text" placeholder="Buscar">
+                        <div class="div-btn-search">
+                            <button class="btn btn-search colorbiken"
+                                type="submit"><i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
                 <div id="demo" class="carousel carouselprincipal carousel-fade" data-ride="carousel">
 
                     <!-- Indicators -->
@@ -99,37 +115,32 @@
                         <li data-target="#demo" data-slide-to="3"></li>
                     </ul>
 
+
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active ">
-                            <img class="carouselprincipal"
+                            <img class="carouselprincipal carouselprincipal_img"
                                 src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner1.jpg'
-                                alt="Bicicleta1" width="100%" height="500">
+                                alt="Bicicleta1" height="500" width="100%">
                         </div>
                         <div class="carousel-item ">
-                            <img class="carouselprincipal"
+                            <img class="carouselprincipal carouselprincipal_img"
                                 src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner3.jpg'
-                                alt="Bicicleta2" width="100%" height="500">
+                                alt="Bicicleta2" height="500" width="100%">
                         </div>
                         <div class="carousel-item ">
-                            <img class="carouselprincipal"
+                            <img class="carouselprincipal carouselprincipal_img"
                                 src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner2.jpg'
-                                alt="Bicicleta3" width="100%" height="500">
+                                alt="Bicicleta3" height="500" width="100%">
                         </div>
                         <div class="carousel-item ">
-                            <img class="carouselprincipal"
+                            <img class="carouselprincipal carouselprincipal_img"
                                 src='https://raw.githubusercontent.com/luisfernandocastro/APIWeb/master/images/banner6.jpg'
-                                alt="Bicicleta4" width="100%" height="500">
+                                alt="Bicicleta4" height="500" width="100%">
                         </div>
                     </div>
-
                     <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon badge-primary"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -372,9 +383,14 @@
                         {% for b in bicicletas %}
                         <div class="col-lg-3 mt-3">
                             <div class="card">
-                                <a id="alert"><img class="card-img-top placeholderimgup imgcat" src="{% static 'img/svg/loading.gif' %}"
-                                        alt="Card image cap">
-                                        <img class="card-img-top imgcat placeholderimgdown" src="{{b.foto.url}}"
+                                {% if  user.is_authenticated %}
+                                <a>
+                                {%else%}    
+                                <a id="alert">
+                                {%endif%}    
+                                    <img class="card-img-top placeholderimgup imgcat"
+                                        src="{% static 'img/svg/loading.gif' %}" alt="Card image cap">
+                                    <img class="card-img-top imgcat placeholderimgdown" src="{{b.foto.url}}"
                                         alt="Card image cap"></a>
                                 <div class="card-body">
                                     <p class="card-text title">Bicicleta de {{b.categoria}}</p>
@@ -385,7 +401,6 @@
                             </div>
                         </div>
                         {% endfor %}
-
                     </div>
                 </div>
             </div>
@@ -415,58 +430,41 @@
                 </div>
                 <div class="col-lg-3">
                     <p class="titlefooter">Empresa</p>
-                    <a href="{% url 'quienessomos' %}"><p class="subtitlefooter">Sobre nosotros</p></a>
-                    <a href="#"><p class="subtitlefooter">Carreras</p></a>
-                    <a href="{% url 'contacto' %}"><p class="subtitlefooter">Contactenos</p></a>
+                    <a href="{% url 'quienessomos' %}">
+                        <p class="subtitlefooter">Sobre nosotros</p>
+                    </a>
+                    <a href="#">
+                        <p class="subtitlefooter">Carreras</p>
+                    </a>
+                    <a href="{% url 'contacto' %}">
+                        <p class="subtitlefooter">Contactenos</p>
+                    </a>
                 </div>
                 <div class="col-lg-3">
                     <p class="titlefooter">Más información</p>
-                    <a href="#"><p class="subtitlefooter">Términos & Condiciones</p></a>
-                    <a href="#"><p class="subtitlefooter">Politica y Privacidad</p></a>
+                    <a href="#">
+                        <p class="subtitlefooter">Términos & Condiciones</p>
+                    </a>
+                    <a href="#">
+                        <p class="subtitlefooter">Politica y Privacidad</p>
+                    </a>
                 </div>
                 <div class="col-lg-4">
                     <p class="titlefooter">Siganos</p>
                     <div class="d-flex justify-content-left">
-                        <a href=""><span class="iconify iconfooter" data-icon="akar-icons:facebook-fill" data-inline="false"></span></a>
-                        <a href=""><span class="iconify iconfooter ml-2" data-icon="ant-design:twitter-circle-filled" data-inline="false"></span></a>
-                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:youtube-with-circle" data-inline="false"></span></a>
-                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter" data-icon="akar-icons:facebook-fill"
+                                data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="ant-design:twitter-circle-filled"
+                                data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:youtube-with-circle"
+                                data-inline="false"></span></a>
+                        <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:linkedin-with-circle"
+                                data-inline="false"></span></a>
                         <a href=""><span class="iconify iconfooter ml-2" data-icon="entypo-social:instagram-with-circle"
-                            data-inline="false"></span></a>
-
+                                data-inline="false"></span></a>
                     </div>
-
                 </div>
             </div>
-            <!--             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link contact1" href='{% url "contacto" %}'> Contactanos <i class="fas fa-at"></i></a>
-                </li>
-            </ul>
-            <p>Linea Gratuita 018000-00001</p>
-            <p>correo: preguntas@biken.com</p>
-
-            <div class="container col-12">
-                <div class="row">
-                    <div class="col-5"></div>
-                    <div class="sociales col-2">
-                        <a href="#" class="facebook"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="facebook"><i class="fab fa-youtube"></i></a>
-                        <a href="https://github.com/cyborglf" class="logo"><img src='{% static "/img/svg/iconoc2.png"%}'
-                                class="logo"></a>
-                        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="facebook"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="col-5"></div>
-                </div>
-            </div>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link contact1" href='{% url "quienessomos" %}'> Quienes Somos <i
-                            class="fas fa-question"></i></a>
-                </li>
-            </ul>
-            &copy; 2020-2021 biken.com Derechos Reservados -->
         </div>
     </div>
 
@@ -482,7 +480,7 @@
                 closeButtonAriaLabel: 'cerrar alerta',
             }).then((result) => {
                 if (result.value) {
-                    window.location.href = "{% url 'registro' %}"
+                    window.location.href = "{% url 'login' %}"
                 }
             });
         });
@@ -503,7 +501,7 @@
 
             }).then((result) => {
                 if (result.value) {
-                    window.location.href = "{% url 'registro' %}"
+                    window.location.href = "{% url 'login' %}"
                 }
             });
         });

@@ -19,7 +19,7 @@
 @media screen and (min-width: 768px) {
   :root {
     --small-font-size: 0.938rem;
-  }
+  } 
 }
 
 /*===== z index =====*/
@@ -42,19 +42,14 @@
 body {
   position: relative;
   margin: 0;
-  padding: 1rem 0 0 2rem;
+  padding: 0rem 0 0 0rem;
   font-family: var(--body-font);
   /*background-color: var(--white-color);*/
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-@media screen and (max-width: 600px) {
-  body{
-    padding: 5rem 0 0 5rem;
-  }
 
-}
 
 
 h1 {
@@ -110,6 +105,7 @@ a {
   align-items: center;
   margin-bottom: 2rem;
   padding: 0rem;
+  
 }
 
 .nav__logo-icon {
@@ -205,14 +201,10 @@ a {
   transition: .5s;
 }
 
-.spacer{
-  margin-top: 40vh;
-}
 
 .imgIcon{
   height: 30px;
   width: 30px;
-  color: red;
 }
 
 .subtitleCard{
@@ -238,4 +230,48 @@ a  .card-img-top {
 
 a  .card-img-top:hover{
   border: solid 1px #d2e2ff;
+}
+
+/*............................................mediaQuerys..................................*/
+
+@media screen and (max-width: 600px) {
+  body{
+    padding: 0rem 0 0 3rem;
+  } 
+
+
+  .l-navbar{
+    background-color: white;
+  }
+
+  .nav__logo-text{
+    color: #2559BD;
+  }
+
+  .active {
+    background-color: var(--first-color);
+    color: --first-color;
+  }
+
+
+  .nav__link {
+    color: grey;
+  }
+  
+  
+  .nav__link:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+  }
+  .nav__logo-icon{
+    background-color: #2059BD;
+    border-radius: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 1100px) {
+  body{
+    padding: 0rem 0 0 5rem;
+  } 
 }
